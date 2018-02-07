@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Presentation</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Your Name Here" />
+    <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Presentation
+### Your Name Here
+
+---
+
+
+
+
+# Outline
+
+* Something
+* Something else
+* That other thing
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Heading Text
+
+---
+
+# Some Acronyms and Codes
+
+.pull-left[
+Test or code chunks for the lhs
+]
+.pull-right[
+rhs bits
+]
+
+---
+
+# Plot on the entire slide with a hex sticker &lt;img src="hex_images/tidyposterior.png" class="title-hex"&gt;  &lt;img src="hex_images/purrr.png" class="title-hex"&gt;
+
+
+```r
+ggplot(mtcars, aes(x = disp, y = mpg)) + 
+  geom_point()
+```
+
+&lt;img src="Template_files/figure-html/example-plot-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Plots on one side
+
+.pull-left[
+show some code here but don't make image:
+
+
+```r
+ggplot(mtcars, aes(x = disp, y = mpg))+ 
+  geom_point()
+```
+
+]
+.pull-right[
+
+&lt;img src="Template_files/figure-html/example-plot-again-1.svg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Insert images from file &lt;img src="hex_images/magrittr.png" class="title-hex"&gt;
+
+.pull-left[
+Most statisticians say "no"
+&lt;img src="hex_images/nopestradomis.jpg" width="450px" /&gt;
+]
+.pull-right[
+
+The Variance-Bias Trade-off
+&lt;img src="figures/VarBias.png" width="450px" /&gt;
+]
+
+
+---
+
+# The Variance-Bias Trade-off &lt;img src="hex_images/rstudio.png" class="title-hex"&gt;
+
+.pull-left[
+* Variance: Differences in model output performance when refitting slightly different data 
+    * fits idiosyncrasies (noise) rather than signal 
+    * model is too flexible
+    * overfitting
+]
+.pull-right[
+* Bias: lack of model performance due to model missing relationships between response and predictors
+    * doesn't fit enough signal in the data
+    * model is too rigid
+    * underfitting
+]
+
+
+
+
+
+---
+
+# The Packages of the tidyverse &lt;img src="hex_images/magrittr.png" class="title-hex"&gt; &lt;img src="hex_images/forcats.png" class="title-hex"&gt;
+
+![](hex_images/tidyverse_all.png)&lt;!-- --&gt;
+
+
+
+---
+
+# Flow-Diagram of the Cross-validation process &lt;img src="hex_images/tidyverse.png" class="title-hex"&gt;
+
+&lt;img src="hex_images/crossval-tree.png" width="75%" /&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
