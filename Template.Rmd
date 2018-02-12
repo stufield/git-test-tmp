@@ -1,6 +1,7 @@
 ---
 title: "Presentation"
 author: Your Name Here
+date: "`r format(Sys.Date(), '%e %B %Y')`"
 output:
   xaringan::moon_reader:
     css: ["mtheme_max.css", "fonts_mtheme_max.css"]  
