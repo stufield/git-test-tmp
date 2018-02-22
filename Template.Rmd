@@ -137,7 +137,7 @@ knitr::include_graphics("hex_images/tidyverse_all.png")
 # Flow-Diagram of the Cross-validation process <img src="hex_images/tidyverse.png" class="title-hex">
 
 ```{r, xvalid, out.width = '75%', echo = FALSE}
-knitr::include_graphics("hex_images/crossval-tree.png")
+knitr::include_graphics("figures/crossval-tree.png")
 ```
 
 
