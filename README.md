@@ -1,8 +1,7 @@
 GitHub Repository for Rmarkdown Slideshow Presentations
 -----------
-Slides, code, and general stuff for making presentations
+Slides, code, slide figures, and general support files for making presentations
 in RStudio lab notebooks and Rmarkdown
-
 
 ### Cheatsheets:
 RStudio cheatsheets can be found here: [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
@@ -27,5 +26,4 @@ Some handy conversions found here at [Switching to the Tidyverse](http://www.sig
 
 * Bullet 2
   + *italics*
-
 
