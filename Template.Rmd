@@ -1,22 +1,38 @@
 ---
-title: "Presentation"
-author: Your Name Here
-date: "`r format(Sys.Date(), '%e %B %Y')`"
+title: "Presentation: <br> subtitle"
+author: Stu Field
+#date: "`r format(Sys.Date(), '%e %B %Y')`"
+date: "`r format(Sys.Date(), '%A %B %d, %Y')`"
 output:
   xaringan::moon_reader:
-    css: ["mtheme_max.css", "fonts_mtheme_max.css"]  
+    css: ["mtheme_max.css", "fonts_mtheme_max.css"]
     self_contained: false
     lib_dir: libs
     nature:
       ratio: '16:9'
       highlightLanguage: R
-      countIncrementalSlides: false   
+      countIncrementalSlides: false
 ---
 
-```{r startup, include = FALSE, message = FALSE, warning = FALSE}
-# This is good for getting the ggplot background consistent with
-# the html background color
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+library(magrittr)
+library(dplyr)
+library(tibble)
 library(ggplot2)
+options(replace.assign  = TRUE, digits = 3, width = 120)
+knitr::opts_chunk$set(
+  fig.align  = "center",    # alignment for figures; left, right, center
+  cache      = FALSE,       # should the chunk be cached?  
+  eval       = TRUE,        # evaluate the chunk?
+  cache.path = "cache/",    # the path for the cached chunks  
+  include    = TRUE,        # should the chunk be included as output? 
+  echo       = FALSE,       # should the chunk be echoed to the pdf? 
+  #fig.height = 7,
+  #fig.width  = 7,
+  tidy       = FALSE        # should output be cleaned up? 
+)
+# This is good for getting the ggplot background 
+# consistent with the html background color
 thm <- theme_bw() + 
   theme(
     panel.background = element_rect(fill = "transparent", colour = NA), 
@@ -28,6 +44,7 @@ thm <- theme_bw() +
 theme_set(thm)
 ```
 
+
 # Outline
 
 * Something
@@ -36,6 +53,7 @@ theme_set(thm)
 
 
 ---
+
 layout: false
 class: inverse, middle, center
 
@@ -56,7 +74,7 @@ rhs bits
 
 # Plot on the entire slide with a hex sticker <img src="hex_images/tidyposterior.png" class="title-hex">  <img src="hex_images/purrr.png" class="title-hex">
 
-```{r example-plot, fig.width=6, fig.height=5.5,  out.width = '40%', fig.align='center', dev = 'svg', dev.args = list(bg = "transparent")}
+```{r example-plot, fig.width = 6, fig.height = 5.5,  out.width = "40%", fig.align = "center", dev = "svg", dev.args = list(bg = "transparent")}
 ggplot(mtcars, aes(x = disp, y = mpg)) + 
   geom_point()
 ```
@@ -68,15 +86,14 @@ ggplot(mtcars, aes(x = disp, y = mpg)) +
 .pull-left[
 show some code here but don't make image:
 
-```{r just-dont, eval = FALSE}
-ggplot(mtcars, aes(x = disp, y = mpg))+ 
+```{r just_dont, eval = FALSE}
+ggplot(mtcars, aes(x = disp, y = mpg)) +
   geom_point()
 ```
-
 ]
 .pull-right[
 
-```{r example-plot-again, echo = FALSE, fig.width=6, fig.height=5.5,  out.width = '90%', fig.align='center', dev = 'svg', dev.args = list(bg = "transparent")}
+```{r example-plot-again, echo = FALSE, fig.width = 6, fig.height = 5.5,  out.width = "90%", fig.align = "center", dev = "svg", dev.args = list(bg = "transparent")}
 ggplot(mtcars, aes(x = disp, y = cyl)) + 
   geom_point()
 ```
@@ -88,20 +105,20 @@ ggplot(mtcars, aes(x = disp, y = cyl)) +
 
 .pull-left[
 Most statisticians say "no"
-```{r, nope, out.width = "450px", echo = FALSE}
+```{r nope, out.width = "450px", echo = FALSE}
 knitr::include_graphics("hex_images/nopestradomis.jpg")
 ```
 ]
 .pull-right[
-
 The Variance-Bias Trade-off
-```{r, varBias, out.width = "450px", echo = FALSE}
+```{r varBias, out.width = "450px", echo = FALSE}
 knitr::include_graphics("figures/VarBias.png")
 ```
 ]
 
 
 ---
+
 
 # The Variance-Bias Trade-off <img src="hex_images/rstudio.png" class="title-hex">
 
@@ -118,27 +135,20 @@ knitr::include_graphics("figures/VarBias.png")
     * underfitting
 ]
 
-
-
-
-
 ---
 
 # The Packages of the tidyverse <img src="hex_images/magrittr.png" class="title-hex"> <img src="hex_images/forcats.png" class="title-hex">
 
-```{r, tidyverse, echo = FALSE}
+```{r tidyverse, out.width = "45%", echo = FALSE}
 knitr::include_graphics("hex_images/tidyverse_all.png")
 ```
-
-
 
 ---
 
 # Flow-Diagram of the Cross-validation process <img src="hex_images/tidyverse.png" class="title-hex">
 
-```{r, xvalid, out.width = '75%', echo = FALSE}
+```{r xvalid, out.width = "75%", echo = FALSE}
 knitr::include_graphics("figures/crossval-tree.png")
 ```
-
 
 
