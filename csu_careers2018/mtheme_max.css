@@ -13,7 +13,7 @@ a, a > code {
 
 
 .remark-code-line-highlighted {
-  background-color: #ffff88; 
+  background-color: #ffff88;
 }
 
 .remark-slide-content {
@@ -225,14 +225,15 @@ position: absolute;
 }
 
 
-.title-hex{
+
+.title-hex {
   height: 60px;
   align: middle;
   float: right;
 }
 
 
-.lower-hex{
+.lower-hex {
   height: 70px;
   position: absolute;
   bottom: 0;
