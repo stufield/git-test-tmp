@@ -195,7 +195,7 @@ $$\vec x_1 = \vec x_0 * A \ \hspace{40pt} \ A = \begin{pmatrix} 0   & 0.1 & 0 \\
 
 .code60[
 ```{r matrix, echo = TRUE}
-x <- c(500, 300, 250)
+x <- c(100, 50, 20)
 A <- matrix(c(0, 0, 0.5, 0.1, 0.1, 0, 0, 0.9, 0.95), ncol = 3)
 A
 c(x %*% A)
