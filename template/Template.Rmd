@@ -11,6 +11,9 @@ output:
     nature:
       ratio: '16:9'
       highlightLanguage: R
+      highlightstylStyle: github
+      highlightstylLines: true
+      navigation: {click: true}
       countIncrementalSlides: false
 ---
 
